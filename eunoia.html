@@ -45,27 +45,11 @@
 			<button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
 				<span class="theme-toggle-track">
 					<span class="theme-toggle-thumb">
-						<svg class="theme-toggle-icon theme-toggle-light" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-							viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round">
-							<circle cx="12" cy="12" r="4" />
-							<path d="M12 2v2" />
-							<path d="M12 20v2" />
-							<path d="m4.93 4.93 1.41 1.41" />
-							<path d="m17.66 17.66 1.41 1.41" />
-							<path d="M2 12h2" />
-							<path d="M20 12h2" />
-							<path d="m6.34 17.66-1.41 1.41" />
-							<path d="m19.07 4.93-1.41 1.41" />
-						</svg>
-						<svg class="theme-toggle-icon theme-toggle-dark" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-							viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round">
-							<path d="M18 5h4" />
-							<path d="M20 3v4" />
-							<path
-								d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
-						</svg>
+						<img class="theme-toggle-icon theme-toggle-light" width="16" height="16" src="lightmode.svg"
+							alt="light mode">
+						</img>
+						<img class="theme-toggle-icon theme-toggle-dark" src="darkmode.svg" width="16" height="16">
+						</img>
 					</span>
 				</span>
 			</button>
@@ -96,7 +80,7 @@
 						<div class="profile-highlights">
 							<div>
 								<span>Storefront</span>
-								<strong>Google Play</strong>
+								<strong>Website, Google Play</strong>
 							</div>
 							<div>
 								<span>Automation</span>
@@ -210,21 +194,34 @@
 						<span class="card-kicker">Published on Play Store</span>
 						<h3>Purpose-built tools for OCD, anxiety, ADHD, and urge management.</h3>
 						<p>
-							EUNOIALIFE is not another generic wellness app. It's built specifically for people dealing with OCD, anxiety, ADHD, intrusive thoughts, and compulsive urges — especially when managing alone gets worse. The app provides tools to pause, understand, and respond differently without shame or overwhelming techniques.
+							EUNOIALIFE is not another generic wellness app. It's built specifically for people dealing with OCD,
+							anxiety, ADHD, intrusive thoughts, and compulsive urges — especially when managing alone gets worse. The
+							app provides tools to pause, understand, and respond differently without shame or overwhelming techniques.
 						</p>
 						<p>
 							<strong>Core features:</strong>
 						</p>
 						<ul style="margin-left: 18px; font-size: 15px; line-height: 1.6;">
-							<li><strong>Urge Search Engine</strong> — When an urge hits, searching online often fuels it. Instead, users search the urge itself and get calm, grounded explanations about why it feels strong, how urges rise and fall naturally, and simple, non-overwhelming ways to pause.</li>
-							<li><strong>What If Lab</strong> — For intrusive thoughts and worst-case fears. Users name what their brain is predicting, sit with uncertainty step by step, and practice gentle ERP-style responses without clinical language.</li>
-							<li><strong>Audio Lessons</strong> — Short, focused audiobooks about OCD patterns, anxiety, ADHD struggles, and learning to respond instead of react. Designed for low-energy days when traditional content feels overwhelming.</li>
-							<li><strong>ADHD-Friendly Tasks (Side Quests)</strong> — Small, flexible, judgment-free daily tasks with haptic feedback. Designed to feel encouraging, not demanding.</li>
-							<li><strong>Progress Tracking</strong> — Growth tracking without streak punishment or "you failed" screens. Encouragement, not pressure.</li>
-							<li><strong>Private by Design</strong> — Chats remain private, no social comparison, built for moments users don't want to explain to anyone else.</li>
+							<li><strong>Urge Search Engine</strong> — When an urge hits, searching online often fuels it. Instead,
+								users search the urge itself and get calm, grounded explanations about why it feels strong, how urges
+								rise and fall naturally, and simple, non-overwhelming ways to pause.</li>
+							<li><strong>What If Lab</strong> — For intrusive thoughts and worst-case fears. Users name what their
+								brain is predicting, sit with uncertainty step by step, and practice gentle ERP-style responses without
+								clinical language.</li>
+							<li><strong>Audio Lessons</strong> — Short, focused audiobooks about OCD patterns, anxiety, ADHD
+								struggles, and learning to respond instead of react. Designed for low-energy days when traditional
+								content feels overwhelming.</li>
+							<li><strong>ADHD-Friendly Tasks (Side Quests)</strong> — Small, flexible, judgment-free daily tasks with
+								haptic feedback. Designed to feel encouraging, not demanding.</li>
+							<li><strong>Progress Tracking</strong> — Growth tracking without streak punishment or "you failed"
+								screens. Encouragement, not pressure.</li>
+							<li><strong>Private by Design</strong> — Chats remain private, no social comparison, built for moments
+								users don't want to explain to anyone else.</li>
 						</ul>
 						<p style="margin-top: 16px;">
-							The content pipeline uses KOKORO TTS and NotebookLM to create humanlike audiobooks and modules, backed by curated psychiatric material and CBT-focused resources. All AI responses are safety-first via GPT-OSS-Safeguard with RAG grounding.
+							The content pipeline uses KOKORO TTS and NotebookLM to create humanlike audiobooks and modules, backed by
+							curated psychiatric material and CBT-focused resources. All AI responses are safety-first via
+							GPT-OSS-Safeguard with RAG grounding.
 						</p>
 					</div>
 					<div class="eunoia-timeline">
@@ -239,7 +236,8 @@
 							<span class="eunoia-step-label">Content Ops</span>
 							<div class="eunoia-step-body">
 								<strong>Admin CMS + KOKORO + NotebookLM</strong>
-								<p>Custom CMS for audiobook and module management. TTS + AI generation pipelines for content at scale.</p>
+								<p>Custom CMS for audiobook and module management. TTS + AI generation pipelines for content at scale.
+								</p>
 							</div>
 						</div>
 						<div class="eunoia-step">

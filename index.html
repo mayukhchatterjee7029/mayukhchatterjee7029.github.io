@@ -1,412 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Mayukh Chatterjee - IIT Madras Data Science student, research-oriented builder, and founder of EUNOIALIFE."
-    />
-    <title>Mayukh Chatterjee | Data Science Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand" href="#home" aria-label="Mayukh Chatterjee home">
-          <span class="brand-mark">M</span>
-          <span>
-            <strong>Mayukh Chatterjee</strong>
-            <small>Data Science · Research · Product</small>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mayukh Chatterjee - IIT Madras Data Science student, research-oriented builder, and founder of EunoiaLife." />
+  <title>Mayukh Chatterjee | Data Science Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Mayukh Chatterjee home">
+        <span class="brand-mark">M</span>
+        <span>
+          <strong>Mayukh Chatterjee</strong>
+          <small>Data Science · Research · Product</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primary-nav" class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#eunoia">EunoiaLife</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+        <span class="theme-toggle-track">
+          <span class="theme-toggle-thumb">
+            <img class="theme-toggle-icon theme-toggle-light" width="16" height="16" src="lightmode.svg"
+              alt="light mode">
+            </img>
+            <img class="theme-toggle-icon theme-toggle-dark" src="darkmode.svg" width="16" height="16">
+            </img>
           </span>
-        </a>
+        </span>
+      </button>
+    </header>
 
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Toggle navigation</span>
-        </button>
+    <main id="home">
+      <section id="hero" class="hero section reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">IIT Madras · Data Science Major</p>
+          <h1>Building experiences from data, research and code.</h1>
+          <p class="lede">
+            I'm Mayukh Chatterjee, a bachelor-level Data Science student focused on
+            neuroscience, genomics, and machine learning, with hands-on experience in
+            web apps, data work, and founder-led product building.
+          </p>
 
-        <nav id="primary-nav" class="nav">
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#projects">Projects</a>
-          <a href="#stack">Stack</a>
-          <a href="#eunoia">EUNOIALIFE</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
-          <span class="theme-toggle-track">
-            <span class="theme-toggle-thumb">
-              <svg class="theme-toggle-icon theme-toggle-light" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-              <svg class="theme-toggle-icon theme-toggle-dark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 5h4"/><path d="M20 3v4"/><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
-            </span>
-          </span>
-        </button>
-      </header>
-
-      <main id="home">
-        <section class="hero section reveal">
-          <div class="hero-copy">
-            <p class="eyebrow">IIT Madras · Data Science Major</p>
-            <h1>Building experiences from data, research and code.</h1>
-            <p class="lede">
-              I'm Mayukh Chatterjee, a bachelor-level Data Science student focused on
-              neuroscience, genomics, and machine learning, with hands-on experience in
-              web apps, data work, and founder-led product building.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#projects">View selected work</a>
-              <a class="button button-secondary" href="#contact">Connect with me</a>
-            </div>
-
-            <dl class="hero-metrics">
-              <div>
-                <dt>Focus</dt>
-                <dd>Research + product</dd>
-              </div>
-              <div>
-                <dt>GitHub</dt>
-                <dd>26 public repos</dd>
-              </div>
-              <div>
-                <dt>Activity</dt>
-                <dd>233 contributions</dd>
-              </div>
-            </dl>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View selected work</a>
+            <a class="button button-secondary" href="#contact">Connect with me</a>
           </div>
 
-          <div class="hero-panel">
-            <div class="orb orb-a"></div>
-            <div class="orb orb-b"></div>
-            <div class="card profile-card">
-              <span class="status-pill">Available for research and product collaborations</span>
-              <h2>Swagatam!</h2> 
-              <p>
-                I like systems that are precise, measurable, and useful, whether that means
-                modeling data, designing products, or shipping interfaces that make complex
-                information easier to understand.
-              </p>
-
-              <div class="profile-highlights">
-                <div>
-                  <span>Primary interests</span>
-                  <strong>Neuro-Biological Systems, ML</strong>
-                </div>
-                <div>
-                  <span>Location</span>
-                  <strong>Kolkata, India</strong>
-                </div>
-                <div>
-                  <span>Solo Founder/Developer</span>
-                  <strong>EUNOIALIFE</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" class="section split reveal">
-          <div class="section-heading">
-            <p class="eyebrow">About</p>
-            <img src="https://avatars.githubusercontent.com/u/201107238?s=400&u=7efa5f233428f79590bd9cfcc8ced07421dcfe2e&v=4" alt="Mayukh Chatterjee" class="about-avatar" />
-          </div>
-          <div class="content-card">
-            <p>
-              I'm studying Data Science at IIT Madras and I build with the mindset that good
-              software should explain, not just impress. My work sits across research curiosity,
-              full-stack execution, and product thinking.
-            </p>
-            <p>
-              The portfolio intentionally keeps the tone scientific and clean. It should reflect
-              what I actually do: study interdisciplinary topics, explore technical problems, ship usable tools, and move between
-              data analysis, web development, and applied project works.
-            </p>
-          </div>
-        </section>
-
-        <section id="research" class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Research directions</p>
-            <h2>What I'm exploring.</h2>
-          </div>
-          <div class="grid research-grid">
-            <article class="card feature-card">
-              <span class="card-kicker">Neuroscience</span>
-              <h3>Pattern recognition in complex biological systems.</h3>
-              <p>
-                Interest in how data-driven methods can help reveal structure in neural behavior,
-                cognition, and signal-rich environments.
-              </p>
-            </article>
-            <article class="card feature-card">
-              <span class="card-kicker">Genomics</span>
-              <h3>Finding useful signal in high-dimensional datasets.</h3>
-              <p>
-                Genomics is a natural fit for Data Science: noisy inputs, large-scale patterns,
-                and meaningful classification problems.
-              </p>
-            </article>
-            <article class="card feature-card">
-              <span class="card-kicker">Machine learning</span>
-              <h3>Practical modeling with an emphasis on interpretation.</h3>
-              <p>
-                I'm drawn to ML projects that are not just accurate, but explainable and grounded
-                in real use cases.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section id="projects" class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Selected work</p>
-            <h2>Projects that show range.</h2>
-          </div>
-
-          <div class="projects-grid">
-            <article class="card project-card featured-project">
-              <div>
-                <span class="card-kicker">Mobile app / Project</span>
-                <h3>EUNOIA Android App - Project EunoiaLife</h3>
-              </div>
-              <p>
-                A mobile-first companion for EUNOIALIFE focused on accessible wellness flows,
-                multilingual learning, and a clean Android experience for daily use.
-              </p>
-              <ul>
-                <li>React Native (Expo)</li>
-                <li>NextJS</li>
-                <li>SupaBase (PostgreSQL)</li> 
-              </ul>
-            </article>
-
-            <article class="card project-card">
-              <div>
-                <span class="card-kicker">Frontend</span>
-                <h3>Spotify clone</h3>
-              </div>
-              <p>
-                A vanilla HTML, CSS, and JavaScript music experience that demonstrates interface
-                structure, responsiveness, and polished interaction design.
-              </p>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-            </article>
-            <article class="card project-card">
-              <div>
-                <span class="card-kicker">Full-stack</span>
-                <h3>Twitter clone</h3>
-              </div>
-              <p>
-                A modern responsive social platform built with Node.js, Express, MongoDB, and
-                Tailwind CSS, focused on clean UX and real-time posting flows.
-              </p>
-              <ul>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>MongoDB</li>
-                <li>Tailwind CSS</li>
-              </ul>
-            </article>
-
-
-            <article class="card project-card">
-              <div>
-                <span class="card-kicker">ML notebook</span>
-                <h3>Breast cancer classification</h3>
-              </div>
-              <p>
-                A classification project using the Wisconsin Breast Cancer dataset to distinguish
-                between malignant and benign tumors.
-              </p>
-              <ul>
-                <li>Python</li>
-                <li>Notebook workflow</li>
-                <li>Classification</li>
-              </ul>
-            </article>
-
-            <article class="card project-card">
-              <div>
-                <span class="card-kicker">Data analysis</span>
-                <h3>UCI student performance analysis</h3>
-              </div>
-              <p>
-                An exploratory analysis of academic performance patterns using a real-world UCI
-                dataset to understand relationships across student attributes.
-              </p>
-              <ul>
-                <li>Python</li>
-                <li>EDA</li>
-                <li>Visualization</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section id="stack" class="section split reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Technology stack</p>
-            <h2>What I build with.</h2>
-          </div>
-          <div class="stack-card card">
-            <div class="stack-group">
-              <h3>Frontend</h3>
-              <div class="tag-list">
-                <span>Next.js</span>
-                <span>TypeScript</span>
-                <span>Tailwind CSS</span>
-                <span>Shadcn/ui</span>
-                <span>React Hook Form</span>
-                <span>Zod</span>
-                <span>React Markdown Editor</span>
-              </div>
-            </div>
-            <div class="stack-group">
-              <h3>Backend</h3>
-              <div class="tag-list">
-                <span>Supabase</span>
-                <span>PostgreSQL</span>
-                <span>RLS</span>
-                <span>Server Actions</span>
-                <span>SSR</span>
-                <span>Supabase Auth</span>
-                <span>Nodemailer</span>
-              </div>
-            </div>
-            <div class="stack-group">
-              <h3>Core languages</h3>
-              <div class="tag-list">
-                <span>Python</span>
-                <span>TypeScript</span>
-                <span>JavaScript</span>
-                <span>React</span>
-                <span>React Native (Expo)</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="eunoia" class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Founder work</p>
-            <h2>EUNOIALIFE.</h2>
-          </div>
-          <div class="card eunoia-card compact">
+          <dl class="hero-metrics">
             <div>
-              <span class="card-kicker">Published mental wellness app</span>
-              <h3>Shipped on Google Play and iterated into MVP v2.</h3>
-              <p>
-                EUNOIALIFE is my DUNS-registered venture (771974639) for OCD, anxiety, ADHD,
-                intrusive thoughts, and urge management. It is a scaled product published on
-                Google Play, refined through MVP v2, and built with KOKORO TTS and NotebookLM
-                for module and audiobook generation from curated psychiatric sources.
-              </p>
+              <dt>Focus</dt>
+              <dd>Research + product</dd>
+            </div>
+            <div>
+              <dt>GitHub</dt>
+              <dd>26 public repos</dd>
+            </div>
+            <div>
+              <dt>Activity</dt>
+              <dd>233 contributions</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-panel">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="card profile-card">
+            <span class="status-pill">Available for research and product collaborations</span>
+            <h2>Swagatam!</h2>
+            <p>
+              I like systems that are precise, measurable, and useful, whether that means
+              modeling data, designing products, or shipping interfaces that make complex
+              information easier to understand.
+            </p>
+
+            <div class="profile-highlights">
+              <div>
+                <span>Primary interests</span>
+                <strong>Neuro-Biological Systems, ML</strong>
+              </div>
+              <div>
+                <span>Location</span>
+                <strong>Kolkata, India</strong>
+              </div>
+              <div>
+                <span>Solo Founder/Developer</span>
+                <strong>EunoiaLife</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section split reveal">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <img
+            src="https://avatars.githubusercontent.com/u/201107238?s=400&u=7efa5f233428f79590bd9cfcc8ced07421dcfe2e&v=4"
+            alt="Mayukh Chatterjee" class="about-avatar" />
+        </div>
+        <div class="content-card">
+          <p>
+            I'm studying Data Science at IIT Madras and I build with the mindset that good
+            software should explain, not just impress. My work sits across research curiosity,
+            full-stack execution, and product thinking.
+          </p>
+          <p>
+            The portfolio intentionally keeps the tone scientific and clean. It should reflect
+            what I actually do: study interdisciplinary topics, explore technical problems, ship usable tools, and move
+            between
+            data analysis, web development, and applied project works.
+          </p>
+        </div>
+      </section>
+
+      <section id="research" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Research directions</p>
+          <h2>What I'm exploring.</h2>
+        </div>
+        <div class="grid research-grid">
+          <article class="card feature-card">
+            <span class="card-kicker">Neuroscience</span>
+            <h3>Pattern recognition in complex biological systems.</h3>
+            <p>
+              Interest in how data-driven methods can help reveal structure in neural behavior,
+              cognition, and signal-rich environments.
+            </p>
+          </article>
+          <article class="card feature-card">
+            <span class="card-kicker">Genomics</span>
+            <h3>Finding useful signal in high-dimensional datasets.</h3>
+            <p>
+              Genomics is a natural fit for Data Science: noisy inputs, large-scale patterns,
+              and meaningful classification problems.
+            </p>
+          </article>
+          <article class="card feature-card">
+            <span class="card-kicker">Machine learning</span>
+            <h3>Practical modeling with an emphasis on interpretation.</h3>
+            <p>
+              I'm drawn to ML projects that are not just accurate, but explainable and grounded
+              in real use cases.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects that show range.</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="card project-card featured-project">
+            <div>
+              <span class="card-kicker">Mobile app / Project</span>
+
+              <div class="project-link">
+                <h3>Eunoia Android App - Flagship Project</h3>
+                <a href="https://play.google.com/store/apps/details?id=in.eunoialife.eunoiaapp" target="_blank"
+                  rel="noreferrer">
+                  <img src="outbound.svg" alt="link" class="link">
+                </a>
+              </div>
+
               <div class="contact-links eunoia-links">
-                <a href="https://play.google.com/store/apps/details?id=in.eunoialife.eunoiaapp" target="_blank" rel="noreferrer">View on Play Store</a>
                 <a href="eunoia.html">Read the case study</a>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section id="experience" class="section split reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2>How I work.</h2>
-          </div>
-          <div class="timeline card">
-            <article>
-              <span>Founder · EUNOIALIFE</span>
-              <h3>Product strategy, direction, and delivery</h3>
-              <p>
-                Building a product from concept to public experience, with emphasis on clarity,
-                trust, and practical value.
-              </p>
-            </article>
-            <article>
-              <span>Student researcher / builder</span>
-              <h3>Data Science, ML, and software projects</h3>
-              <p>
-                Working across technical projects that combine analysis, experimentation,
-                interface design, and implementation.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section id="education" class="section split reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Education</p>
-            <h2>Academic timeline.</h2>
-          </div>
-          <div class="card">
-            <div class="eunoia-timeline">
-              <div class="eunoia-step">
-                <span class="eunoia-step-label">Sep 2024 - Present</span>
-                <div class="eunoia-step-body">
-                  <strong>IIT Madras</strong>
-                  <p>Bachelor of Science in Data Science and Applications.</p>
-                </div>
-              </div>
-              <div class="eunoia-step">
-                <span class="eunoia-step-label">Aug 2024</span>
-                <div class="eunoia-step-body">
-                  <strong>NIT Durgapur (opted out)</strong>
-                  <p>Got admission to Integrated MSc. in Chemistry. Valuable learning experience; pivoted to pursue Data Science at IIT Madras after careful consideration.</p>
-                </div>
-              </div>
-              <div class="eunoia-step">
-                <span class="eunoia-step-label">2021 - 2024</span>
-                <div class="eunoia-step-body">
-                  <strong>Unacademy + Code with Harry</strong>
-                  <p>JEE Mains and Advanced preparation. Also explored Computer Programming fundamentals.</p>
-                </div>
-              </div>
-               
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Contact</p>
-            <h2>Let's build something useful.</h2>
-          </div>
-          <div class="contact-card card">
             <p>
-              Open to research discussions, product collaborations, and opportunities where data,
-              engineering, and thoughtful design matter.
+              A mobile-first companion for EunoiaLife focused on accessible wellness flows,
+              multilingual learning, and a clean Android experience for daily use.
             </p>
-            <div class="contact-links">
-              <a href="https://github.com/mayukhchatterjee7029" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="https://eunoialife.in" target="_blank" rel="noreferrer">EUNOIALIFE</a>
-              <a href="#home">Back to top</a>
+            <ul>
+              <li>React Native (Expo)</li>
+              <li>NextJS</li>
+              <li>SupaBase (PostgreSQL)</li>
+            </ul>
+          </article>
+
+          <article class="card project-card">
+            <div>
+              <span class="card-kicker">Frontend</span>
+              <h3>Spotify clone</h3>
+            </div>
+            <p>
+              A vanilla HTML, CSS, and JavaScript music experience that demonstrates interface
+              structure, responsiveness, and polished interaction design.
+            </p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </article>
+          <article class="card project-card">
+            <div>
+              <span class="card-kicker">Mongo Express Tailwind</span>
+              <h3>Twitter clone</h3>
+            </div>
+            <p>
+              A modern responsive social platform built with Node.js, Express, MongoDB, and
+              Tailwind CSS, focused on clean UX and real-time posting flows.
+            </p>
+            <ul>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </article>
+
+
+          <article class="card project-card">
+            <div>
+              <span class="card-kicker">ML notebook</span>
+              <h3>Breast cancer classification</h3>
+            </div>
+            <p>
+              A classification project using the Wisconsin Breast Cancer dataset to distinguish
+              between malignant and benign tumors.
+            </p>
+            <ul>
+              <li>Python</li>
+              <li>Notebook workflow</li>
+              <li>Classification</li>
+            </ul>
+          </article>
+
+          <article class="card project-card">
+            <div>
+              <span class="card-kicker">Data analysis</span>
+              <h3>UCI student performance analysis</h3>
+            </div>
+            <p>
+              An exploratory analysis of academic performance patterns using a real-world UCI
+              dataset to understand relationships across student attributes.
+            </p>
+            <ul>
+              <li>Python</li>
+              <li>EDA</li>
+              <li>Visualization</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="stack" class="section split reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Technology stack</p>
+          <h2>What I build with.</h2>
+        </div>
+        <div class="stack-card card">
+          <div class="stack-group">
+            <h3>Frontend</h3>
+            <div class="tag-list">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS</span>
+              <span>Shadcn/ui</span>
+              <span>React Hook Form</span>
+              <span>Zod</span>
+              <span>React Markdown Editor</span>
             </div>
           </div>
-        </section>
-      </main>
+          <div class="stack-group">
+            <h3>Backend</h3>
+            <div class="tag-list">
+              <span>Supabase</span>
+              <span>PostgreSQL</span>
+              <span>RLS</span>
+              <span>Server Actions</span>
+              <span>SSR</span>
+              <span>Supabase Auth</span>
+              <span>Nodemailer</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <h3>Core languages</h3>
+            <div class="tag-list">
+              <span>Python</span>
+              <span>TypeScript</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>React Native (Expo)</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <a class="back-to-top" href="#home" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-      </a>
-    </div>
+      <section id="eunoia" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Founder work</p>
+          <h2>EunoiaLife.</h2>
+        </div>
+        <div class="card eunoia-card compact">
+          <div>
+            <span class="card-kicker">Published mental wellness app</span>
+            <h3>Shipped on Google Play and iterated into MVP v2.</h3>
+            <p>
+              EunoiaLife is my DUNS-registered venture (771974639) for OCD, anxiety, ADHD,
+              intrusive thoughts, and urge management. It is a scaled product published on
+              Google Play, refined through MVP v2, and built with KOKORO TTS and NotebookLM
+              for module and audiobook generation from curated psychiatric sources.
+            </p>
+            <div class="contact-links eunoia-links">
+              <a href="https://play.google.com/store/apps/details?id=in.eunoialife.eunoiaapp" target="_blank"
+                rel="noreferrer">View on Play Store</a>
+              <a href="eunoia.html">Read the case study</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <script src="script.js"></script>
-  </body>
+      <section id="experience" class="section split reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>How I work.</h2>
+        </div>
+        <div class="timeline card">
+          <article>
+            <span>Founder · EunoiaLife</span>
+            <h3>Product strategy, direction, and delivery</h3>
+            <p>
+              Building a product from concept to public experience, with emphasis on clarity,
+              trust, and practical value.
+            </p>
+          </article>
+          <article>
+            <span>Student</span>
+            <h3>Data Science & ML projects</h3>
+            <p>
+              Likes working across technical projects that combine analysis, experimentation and implementation.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="section split reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2>Academic timeline.</h2>
+        </div>
+        <div class="card">
+          <div class="eunoia-timeline">
+            <div class="eunoia-step">
+              <span class="eunoia-step-label">Sep 2024 - Present</span>
+              <div class="eunoia-step-body">
+                <strong>IIT Madras</strong>
+                <p>Bachelor of Science in Data Science and Applications.</p>
+              </div>
+            </div>
+            <div class="eunoia-step">
+              <span class="eunoia-step-label">Aug 2024</span>
+              <div class="eunoia-step-body">
+                <strong>NIT Durgapur (opted out)</strong>
+                <p>Got admission to Integrated MSc. in Chemistry. Valuable learning experience; pivoted to pursue Data
+                  Science at IIT Madras after careful consideration.</p>
+              </div>
+            </div>
+            <div class="eunoia-step">
+              <span class="eunoia-step-label">2021 - 2024</span>
+              <div class="eunoia-step-body">
+                <strong>Unacademy + Code with Harry</strong>
+                <p>JEE Mains and Advanced preparation. Also explored Computer Programming fundamentals.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build something useful.</h2>
+        </div>
+        <div class="contact-card card">
+          <p>
+            Open to research discussions, product collaborations, and opportunities where data,
+            engineering, and thoughtful design matter.
+          </p>
+          <div class="contact-links">
+            <a href="https://github.com/mayukhchatterjee7029" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="www.linkedin.com/in/mayukh-chatterjee-24u10011" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.eunoialife.in/contact" target="_blank" rel="noreferrer">EunoiaLife</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Back to top overlay -->
+    <a class="back-to-top" href="#home" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </a>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mayukh Chatterjee</h3>
+          <p>Data Science · Research · Product</p>
+        </div>
+        <div class="footer-section">
+          <h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/mayukhchatterjee7029" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/mayukh-chatterjee-24u10011" target="_blank"
+                rel="noreferrer">LinkedIn</a></li>
+            <li><a href="https://eunoialife.in" target="_blank" rel="noreferrer">EunoiaLife</a></li>
+            <li><a href="mailto:mayukhchatterjee7029@gmail.com">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-meta">Designed and built with precision. © 2024–2026 Mayukh Chatterjee.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>

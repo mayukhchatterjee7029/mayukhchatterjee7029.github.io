@@ -124,15 +124,15 @@ if ('IntersectionObserver' in window) {
 
   sections.forEach((section) => navObserver.observe(section));
 
-  // Back-to-top button visibility based on about section scroll
+  // Back-to-top button visibility based on hero section scroll
   const backToTop = document.querySelector('.back-to-top');
   if (backToTop) {
-    const aboutSection = document.querySelector('#about');
-    if (aboutSection) {
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
       const backToTopObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            // Show back-to-top when about section is NOT in view (i.e., scrolled past)
+            // Show back-to-top when hero section is NOT in view (i.e., scrolled past it)
             backToTop.classList.toggle('visible', !entry.isIntersecting);
           });
         },
@@ -141,7 +141,7 @@ if ('IntersectionObserver' in window) {
           rootMargin: '0px',
         },
       );
-      backToTopObserver.observe(aboutSection);
+      backToTopObserver.observe(heroSection);
     }
   }
 } else {
