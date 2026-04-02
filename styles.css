@@ -129,6 +129,35 @@ button {
   z-index: 1;
 }
 
+.back-to-top {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  transform: translateY(-2px);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .topbar {
   width: min(100% - 32px, var(--container));
   margin: 16px auto 0;
@@ -343,12 +372,12 @@ main {
 .card h3 {
   font-family: "Space Grotesk", sans-serif;
   line-height: 1.08;
-  letter-spacing: -0.04em; 
+  letter-spacing: -0.04em;
 }
 
 .hero-copy h1 {
   margin: 8px 0 16px;
-  font-size: 64px;
+  font-size: 56px;
   max-width: 12ch;
 }
 
@@ -549,19 +578,29 @@ main {
 
 .split {
   display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(220px, 0.4fr) minmax(0, 1.6fr);
   gap: 24px;
   align-items: start;
 }
 
 .section-heading {
   position: sticky;
-  top: 112px; 
+  top: 112px;
   z-index: 4;
   align-self: start;
   padding: 12px 22px 16px;
   background: var(--bg);
   border-radius: 20px;
+}
+
+.about-avatar {
+  display: flex;
+  width: 180px;
+  height: 180px;
+  margin: 12px 0;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 2px solid var(--border);
 }
 
 .content-card,
@@ -570,7 +609,12 @@ main {
   padding: 24px;
 }
 
-.content-card p + p {
+.content-card {
+
+  border-bottom-left-radius: 4px;
+}
+
+.content-card p+p {
   margin-top: 16px;
 }
 
@@ -651,7 +695,7 @@ main {
   gap: 22.4px;
 }
 
-.stack-group + .stack-group {
+.stack-group+.stack-group {
   padding-top: 16px;
   border-top: 1px solid var(--border);
 }
@@ -749,7 +793,7 @@ main {
   line-height: 1.55;
 }
 
-.eunoia-subpoints li + li {
+.eunoia-subpoints li+li {
   margin-top: 6px;
 }
 
@@ -784,7 +828,7 @@ main {
   padding: 16px 0;
 }
 
-.timeline article + article {
+.timeline article+article {
   border-top: 1px solid var(--border);
 }
 
@@ -841,6 +885,7 @@ main {
 }
 
 @media (max-width: 1080px) {
+
   .hero,
   .split,
   .eunoia-card,
@@ -909,6 +954,7 @@ main {
 }
 
 @media (max-width: 540px) {
+
   .topbar,
   main {
     width: min(100% - 16px, var(--container));
@@ -925,7 +971,7 @@ main {
   .hero-copy h1 {
     font-size: 42px;
   }
-  
+
   .content-card,
   .card {
     padding: 19.2px;

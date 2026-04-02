@@ -7,10 +7,18 @@ const revealElements = Array.from(document.querySelectorAll('.reveal'));
 const sections = Array.from(document.querySelectorAll('main section[id]'));
 
 const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
-let hasManualThemeOverride = false;
+const THEME_STORAGE_KEY = 'eunoia-theme-preference';
 
 function getSystemTheme() {
   return prefersDarkMode.matches ? 'dark' : 'light';
+}
+
+function getSavedTheme() {
+  return localStorage.getItem(THEME_STORAGE_KEY);
+}
+
+function saveTheme(theme) {
+  localStorage.setItem(THEME_STORAGE_KEY, theme);
 }
 
 function setTheme(theme) {
@@ -26,12 +34,15 @@ function setTheme(theme) {
   }
 }
 
-setTheme(getSystemTheme());
+// Initialize theme: saved preference takes priority, otherwise use system theme
+const initialTheme = getSavedTheme() || getSystemTheme();
+setTheme(initialTheme);
 
 if (themeToggle) {
   const toggleTheme = () => {
-    hasManualThemeOverride = true;
-    setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+    const newTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    saveTheme(newTheme);
   };
 
   themeToggle.addEventListener('click', (e) => {
@@ -47,8 +58,11 @@ if (themeToggle) {
   });
 }
 
+// Listen for system theme changes, but respect saved user preference
 prefersDarkMode.addEventListener('change', (event) => {
-  if (!hasManualThemeOverride) {
+  const savedTheme = getSavedTheme();
+  // Only update if user hasn't set a preference
+  if (!savedTheme) {
     setTheme(event.matches ? 'dark' : 'light');
   }
 });
@@ -109,6 +123,27 @@ if ('IntersectionObserver' in window) {
   );
 
   sections.forEach((section) => navObserver.observe(section));
+
+  // Back-to-top button visibility based on about section scroll
+  const backToTop = document.querySelector('.back-to-top');
+  if (backToTop) {
+    const aboutSection = document.querySelector('#about');
+    if (aboutSection) {
+      const backToTopObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            // Show back-to-top when about section is NOT in view (i.e., scrolled past)
+            backToTop.classList.toggle('visible', !entry.isIntersecting);
+          });
+        },
+        {
+          threshold: 0,
+          rootMargin: '0px',
+        },
+      );
+      backToTopObserver.observe(aboutSection);
+    }
+  }
 } else {
   revealElements.forEach((element) => element.classList.add('in-view'));
 }
