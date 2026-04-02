@@ -1014,7 +1014,10 @@ main {
   .nav.open {
     display: flex;
   }
-
+ 
+  .nav-avatar {
+    width: 20px;
+  }
   .hero {
     min-height: auto;
     padding-top: 8px;
