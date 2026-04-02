@@ -1,65 +1,55 @@
 const root = document.documentElement;
 const menuToggle = document.querySelector('.menu-toggle');
 const themeToggle = document.querySelector('.theme-toggle');
-const themeToggleLabel = document.querySelector('.theme-toggle-label');
 const nav = document.querySelector('.nav');
 const navLinks = Array.from(document.querySelectorAll('.nav a'));
 const revealElements = Array.from(document.querySelectorAll('.reveal'));
 const sections = Array.from(document.querySelectorAll('main section[id]'));
-const themeStorageKey = 'portfolio-theme';
-
-const safeStorage = {
-  get(key) {
-    try {
-      return window.localStorage.getItem(key);
-    } catch {
-      return null;
-    }
-  },
-  set(key, value) {
-    try {
-      window.localStorage.setItem(key, value);
-    } catch {
-      return undefined;
-    }
-  },
-};
 
 const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+let hasManualThemeOverride = false;
 
-function setTheme(theme, persist = true) {
+function getSystemTheme() {
+  return prefersDarkMode.matches ? 'dark' : 'light';
+}
+
+function setTheme(theme) {
   root.dataset.theme = theme;
 
   if (themeToggle) {
-    themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+    const isDark = theme === 'dark';
+    themeToggle.setAttribute('aria-pressed', String(isDark));
     themeToggle.setAttribute(
       'aria-label',
-      theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode',
+      isDark ? 'Switch to light mode' : 'Switch to dark mode',
     );
-  }
-
-  if (themeToggleLabel) {
-    themeToggleLabel.textContent = theme === 'dark' ? 'Dark mode' : 'Light mode';
-  }
-
-  if (persist) {
-    safeStorage.set(themeStorageKey, theme);
   }
 }
 
-const savedTheme = safeStorage.get(themeStorageKey);
-const initialTheme = savedTheme || (prefersDarkMode.matches ? 'dark' : 'light');
-setTheme(initialTheme, false);
+setTheme(getSystemTheme());
 
 if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
+  const toggleTheme = () => {
+    hasManualThemeOverride = true;
     setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+  };
+
+  themeToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleTheme();
+  });
+
+  themeToggle.addEventListener('keydown', (e) => {
+    if (e.code === 'Space' || e.code === 'Enter') {
+      e.preventDefault();
+      toggleTheme();
+    }
   });
 }
 
 prefersDarkMode.addEventListener('change', (event) => {
-  if (!safeStorage.get(themeStorageKey)) {
-    setTheme(event.matches ? 'dark' : 'light', false);
+  if (!hasManualThemeOverride) {
+    setTheme(event.matches ? 'dark' : 'light');
   }
 });
 
