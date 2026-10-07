@@ -5,6 +5,8 @@ const nav = document.querySelector('.nav');
 const navLinks = Array.from(document.querySelectorAll('.nav a'));
 const revealElements = Array.from(document.querySelectorAll('.reveal'));
 const sections = Array.from(document.querySelectorAll('main section[id]'));
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const outboundLinks = Array.from(document.querySelectorAll('.link'));
 
 const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
 const THEME_STORAGE_KEY = 'eunoia-theme-preference';
@@ -68,20 +70,86 @@ prefersDarkMode.addEventListener('change', (event) => {
 });
 
 if (menuToggle && nav) {
+  const closeMenu = () => {
+    nav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  };
+
   menuToggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
-}
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    if (nav && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      menuToggle?.setAttribute('aria-expanded', 'false');
+  document.addEventListener('click', (event) => {
+    if (
+      nav.classList.contains('open') &&
+      !nav.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    ) {
+      closeMenu();
     }
   });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && nav.classList.contains('open')) {
+      closeMenu();
+      menuToggle.focus();
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+}
+
+outboundLinks.forEach((icon) => {
+  const link = icon.closest('a');
+
+  if (!link) {
+    return;
+  }
+
+  link.addEventListener('click', () => {
+    icon.classList.remove('is-clicked');
+    requestAnimationFrame(() => icon.classList.add('is-clicked'));
+  });
+
+  icon.addEventListener('animationend', () => {
+    icon.classList.remove('is-clicked');
+  });
 });
+
+function updateActiveNav() {
+  const isCaseStudy = currentPage === 'eunoia.html';
+  let activeId = '';
+
+  if (sections.length > 0) {
+    const navigationOffset = 150;
+    const currentSection = sections.reduce((activeSection, section) => {
+      return section.getBoundingClientRect().top <= navigationOffset
+        ? section
+        : activeSection;
+    }, sections[0]);
+
+    activeId = currentSection.id;
+  }
+
+  navLinks.forEach((link) => {
+    const targetUrl = new URL(link.href, window.location.href);
+    const isCurrentPageLink =
+      targetUrl.pathname === window.location.pathname &&
+      targetUrl.hash === `#${activeId}`;
+    const isCaseStudyLink = isCaseStudy && targetUrl.hash === '#eunoia';
+    const isActive = isCurrentPageLink || isCaseStudyLink;
+
+    link.classList.toggle('active', isActive);
+    if (isActive) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+}
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(
@@ -103,26 +171,6 @@ if ('IntersectionObserver' in window) {
     element.style.transitionDelay = `${Math.min(index * 90, 360)}ms`;
     observer.observe(element);
   });
-
-  const navObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
-        navLinks.forEach((link) => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
-        });
-      });
-    },
-    {
-      threshold: 0.55,
-      rootMargin: '-18% 0px -50% 0px',
-    },
-  );
-
-  sections.forEach((section) => navObserver.observe(section));
 
   // Back-to-top button visibility based on hero section scroll
   const backToTop = document.querySelector('.back-to-top');
@@ -147,3 +195,22 @@ if ('IntersectionObserver' in window) {
 } else {
   revealElements.forEach((element) => element.classList.add('in-view'));
 }
+
+let activeNavFrame;
+window.addEventListener(
+  'scroll',
+  () => {
+    if (activeNavFrame) {
+      return;
+    }
+
+    activeNavFrame = window.requestAnimationFrame(() => {
+      updateActiveNav();
+      activeNavFrame = undefined;
+    });
+  },
+  { passive: true },
+);
+
+window.addEventListener('hashchange', updateActiveNav);
+updateActiveNav();
