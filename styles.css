@@ -773,12 +773,28 @@ main {
   font-size: 12px;
   font-weight: 700;
   transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+  display: flex;
+  align-items: center;
 }
 
 .eunoia-links a:hover,
 .contact-links a:hover {
   color: var(--accent-hover-text);
   background: var(--accent-hover-bg);
+  transform: translateY(-2px);
+}
+
+.playstore-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:4px; 
+  background-color:#ddd !important; 
+}
+
+.playstore-link:hover {
+  color: var(--accent-hover-text) !important;
+  background: var(--accent-hover-bg) !important;
   transform: translateY(-2px);
 }
 
