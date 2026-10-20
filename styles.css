@@ -310,8 +310,8 @@ main {
 }
 
 .section {
-  padding: 74px 12px;
-  scroll-margin-top: 112px;
+  padding: 36px 12px;
+  scroll-margin-top: 68px;
 }
 
 .hero {
@@ -1064,8 +1064,8 @@ main {
 
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 650ms ease, transform 650ms ease;
+  transform: translateY(8px);
+  transition: opacity 450ms ease, transform 450ms ease;
 }
 
 .reveal.in-view {
@@ -1190,8 +1190,8 @@ main {
   }
 
   .section {
-    padding: 55px 0;
-    scroll-margin-top: 92px;
+    padding: 24px 0;
+    scroll-margin-top: 84px;
   }
 
   .hero {
