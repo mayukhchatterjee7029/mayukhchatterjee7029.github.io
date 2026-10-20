@@ -603,15 +603,10 @@ main {
   background: linear-gradient(90deg, var(--accent), var(--accent-strong));
 }
 
-/*
-.section-heading h2 {
-  max-width: 9ch;
-} */
-
 .about-avatar {
   width: 150px;
   height: 150px;
-  margin: 22px 0 0;
+  margin: 8px 0 0;
   border: 1px solid var(--line);
   border-radius: 16px;
   object-fit: cover;
@@ -622,6 +617,7 @@ main {
 .card {
   padding: 26px;
   border-radius: var(--radius-lg);
+  align-self: center;
 }
 
 .content-card {
@@ -1080,6 +1076,7 @@ main {
 
 #about {
   padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 #about .content-card {
