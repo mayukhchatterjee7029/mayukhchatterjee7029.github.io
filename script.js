@@ -214,3 +214,8 @@ window.addEventListener(
 
 window.addEventListener('hashchange', updateActiveNav);
 updateActiveNav();
+
+// Set draggable=false for all img tags
+document.querySelectorAll('img').forEach((img) => {
+  img.setAttribute('draggable', 'false');
+});
